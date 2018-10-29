@@ -31,6 +31,11 @@ public class ClochePlusPlus {
 			WeeeFlowersCompat.preInit(config);
 		}
 
+		if(Loader.isModLoaded("endercrop"))
+		{
+			EnderCropCompat.preInit(config);
+		}
+
 		config.save();
 
 	}
@@ -46,6 +51,11 @@ public class ClochePlusPlus {
 		if(Loader.isModLoaded("weeeflowers"))
 		{
 			WeeeFlowersCompat.init();
+		}
+
+		if(Loader.isModLoaded("endercrop"))
+		{
+			EnderCropCompat.init();
 		}
 	}
 
