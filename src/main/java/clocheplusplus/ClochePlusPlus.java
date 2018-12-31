@@ -13,7 +13,7 @@ public class ClochePlusPlus {
 
 	public static final String MODID = "clocheplusplus";
 	public static final String NAME = "Cloche++";
-	public static final String VERSION = "0.4";
+	public static final String VERSION = "0.5";
 	public static final String DEPENDENCIES="required-after:immersiveengineering;after:weeeflowers;after:t3s4ebw";
 
 	@EventHandler
