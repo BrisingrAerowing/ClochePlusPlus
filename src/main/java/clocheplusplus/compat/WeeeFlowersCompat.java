@@ -35,7 +35,7 @@ public class WeeeFlowersCompat {
 		{
 			Item seed = Item.REGISTRY.getObject(new ResourceLocation("weeeflowers", color + "seeditem"));
 			Item flower = Item.REGISTRY.getObject(new ResourceLocation("weeeflowers", color + "flower"));
-			Block flowerCrop = Block.REGISTRY.getObject(new ResourceLocation("weeeflowers", color + "flower"));
+			Block flowerCrop = Block.REGISTRY.getObject(new ResourceLocation("weeeflowers", "pam" + color + "crop"));
 
 			BelljarHandler.registerHandler(new WeeeFlowersPlantHandler(new ItemStack(seed), new ItemStack(flower), flowerCrop));
 

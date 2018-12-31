@@ -24,10 +24,11 @@ public class EnderCropCompat {
 
 	public static void preInit(Configuration config)
 	{
+		int epStackLimit = Items.ENDER_PEARL.getItemStackLimit(new ItemStack(Items.ENDER_PEARL));
 		seedWeight = config.getFloat("seedWeight", "Ender Crop", 0.25f, 0.0001f, 1, "The weight of a seed dropping. Must be between 0.0001 and 1");
 		pearlWeight = config.getFloat("pearlWeight", "Ender Crop", 1f, 0.0001f, 1, "The weight of an Ender Pearl dropping. Must be between 0.0001 and 1");
-		minPearls = config.getInt("minPearls", "Ender Crop", 1, 1, 16, "The minimum number of Ender Pearls to drop. Must be between 1 and 16");
-		maxPearls = config.getInt("maxPearls", "EnderCrop", 2, 1, 16, "The maximum number of Ender Pearls to drop. Must be between 1 and 16");
+		minPearls = config.getInt("minPearls", "Ender Crop", 1, 1, epStackLimit, "The minimum number of Ender Pearls to drop. Must be between 1 and the max stack size of Ender Pearls");
+		maxPearls = config.getInt("maxPearls", "Ender Crop", 2, 1, epStackLimit, "The maximum number of Ender Pearls to drop. Must be between 1 and the max stack size of Ender Pearls");
 	}
 
 	public static void init()
