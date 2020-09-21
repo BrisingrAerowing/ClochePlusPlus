@@ -13,7 +13,9 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 import java.util.Random;
 
 public abstract class WeightedPlantHandler implements BelljarHandler.IPlantHandler
@@ -49,7 +51,8 @@ public abstract class WeightedPlantHandler implements BelljarHandler.IPlantHandl
 	@SideOnly(Side.CLIENT)
 	public IBlockState[] getRenderedPlant(ItemStack seed, ItemStack soil, float growth, TileEntity tile)
 	{
-		ImmutableList<IBlockState> states = crop.getBlockState().getValidStates();
+			List<IBlockState> states = new ArrayList<IBlockState>();
+			states.add(crop.getDefaultState());
 
 			IBlockState[] ret = new IBlockState[states.size()];
 			for(int i = 0; i < states.size(); i++)
